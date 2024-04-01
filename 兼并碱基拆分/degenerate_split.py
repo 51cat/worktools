@@ -1,6 +1,5 @@
 from collections import Counter
 from tk.transfer import fasta_to_dict
-from celescope.tools.utils import add_log
 import argparse
 
 
@@ -70,7 +69,6 @@ def seq_explosion(seqs: list):
         print(new_seqs)
         return seq_explosion(new_seqs)
 
-@add_log
 def main():
     parser = argparse.ArgumentParser(description='')
     parser.add_argument('--fa',"-f", help='', required=True)
